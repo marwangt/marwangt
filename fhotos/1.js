@@ -44,7 +44,7 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
 >  ₪┆⊱∘ 🔁 الـتـشـغـيـل ﹝${uptime}﹞
 >  ₪┆⊱∘ 👥 المستخدمين ﹝${rtotalreg}﹞
 *◆━ ⊱∘┃﹝🍉﹞┃∘⊰ ━◆*
-> 𝑉𝐸𝑅𝑺𝐼𝛩𝑁 𝑁𝐴𝑀𝐵𝐸𝑅 4`,subtitle: "Araab Zack",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: zack } }, { upload: conn.waUploadToServer }, {quoted: m}))},
+> ملااحضة: اقرا قوانين البوت `,subtitle: "Araab Zack",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: zack } }, { upload: conn.waUploadToServer }, {quoted: m}))},
                     contextInfo: {
                         mentionedJid: [m.sender],
                         isForwarded: false,
