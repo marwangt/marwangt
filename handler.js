@@ -1471,7 +1471,7 @@ mentionedJid:[user],
 "showAdAttribution": true,
 "renderLargerThumbnail": true,
 "thumbnail": apii.data, 
-"title": [wm, '『𝑺𝑈𝑃𝛩𝑅﹝🍉﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』' + gt + ' 😻', '『𝑺𝑈𝑃𝛩𝑅﹝🍇﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』'].getRandom(),
+"title": [wm, '『𝑺𝑈𝑃𝛩𝑅﹝🍉﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』' + gt + '『𝑺𝑈𝑃𝛩𝑅﹝🫐﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』', '『𝑺𝑈𝑃𝛩𝑅﹝🍇﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』'].getRandom(),
 "containsAutoReply": true,
 "mediaType": 1, 
 sourceUrl: 'https://whatsapp.com/channel/0029VamEMSIB4hdaVyNiVQ0C' }}}, { quoted: fkontak2 })
@@ -1563,7 +1563,7 @@ restrict: lenguajeGB['smsRestrict'](),
 //if (msg) return m.reply(msg)
 	
 let tg = { quoted: m, userJid: conn.user.jid }
-let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '『𝑺𝑈𝑃𝛩𝑅﹝🍉﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』 ' + gt + ' 😻', '『𝑺𝑈𝑃𝛩𝑅﹝🍇﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』'].getRandom(), thumbnail: gataImg, sourceUrl: accountsgb }}}}, tg)
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '『𝑺𝑈𝑃𝛩𝑅﹝🍉﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』 ' + gt + '『𝑺𝑈𝑃𝛩𝑅﹝🫐﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』', '『𝑺𝑈𝑃𝛩𝑅﹝🍇﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』'].getRandom(), thumbnail: gataImg, sourceUrl: accountsgb }}}}, tg)
 if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
 }
 
