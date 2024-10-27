@@ -1435,7 +1435,7 @@ pp = await this.profilePictureUrl(user, 'image')
 let apii = await this.getFile(pp)                                      
 const botTt2 = groupMetadata.participants.find(u => this.decodeJid(u.id) == this.user.jid) || {} 
 const isBotAdminNn = botTt2?.admin === "admin" || false
-text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 😻') :
+text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '『𝑺𝑈𝑃𝛩𝑅﹝🍉﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』') :
 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
 			    
 if (chat.antifake && isBotAdminNn && action === 'add') {
@@ -1471,7 +1471,7 @@ mentionedJid:[user],
 "showAdAttribution": true,
 "renderLargerThumbnail": true,
 "thumbnail": apii.data, 
-"title": [wm, '😻 𝗦𝘂𝗽𝗲𝗿 ' + gt + ' 😻', '『𝑅𝐼𝑇𝐴﹝🍇﹞𝐵𝛩𝑇』'].getRandom(),
+"title": [wm, '『𝑺𝑈𝑃𝛩𝑅﹝🍇﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』 ' + gt + ' 😻', '『𝑅𝐼𝑇𝐴﹝🍇﹞𝐵𝛩𝑇』'].getRandom(),
 "containsAutoReply": true,
 "mediaType": 1, 
 sourceUrl: 'https://whatsapp.com/channel/0029VamEMSIB4hdaVyNiVQ0C' }}}, { quoted: fkontak2 })
@@ -1563,7 +1563,7 @@ restrict: lenguajeGB['smsRestrict'](),
 //if (msg) return m.reply(msg)
 	
 let tg = { quoted: m, userJid: conn.user.jid }
-let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '😻 𝗦𝘂𝗽𝗲𝗿 ' + gt + ' 😻', '🌟 centergatabot.gmail.com'].getRandom(), thumbnail: gataImg, sourceUrl: accountsgb }}}}, tg)
+let prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: msg, contextInfo: { externalAdReply: { title: lenguajeGB.smsAvisoAG().slice(0,-2), body: [wm, '『𝑺𝑈𝑃𝛩𝑅﹝🍉﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』 ' + gt + ' 😻', '『𝑺𝑈𝑃𝛩𝑅﹝🍇﹞𝑅𝐼𝑇𝐴-𝐵𝛩𝑇』'].getRandom(), thumbnail: gataImg, sourceUrl: accountsgb }}}}, tg)
 if (msg) return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
 }
 
