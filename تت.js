@@ -1,123 +1,45 @@
-//by araab zack & Naruto 
+const _0x2fe624 = _0x21c0;
+(function (_0x2cf038, _0x1da627) {
+    const _0x4d6786 = _0x21c0,
+        _0x4cdefe = _0x2cf038();
+    while (!![]) {
+        try {
+            const _0x498ed9 = -parseInt(_0x4d6786(0x164)) / 0x1 + parseInt(_0x4d6786(0x168)) / 0x2 + parseInt(_0x4d6786(0x15f)) / 0x3 * (-parseInt(_0x4d6786(0x16b)) / 0x4) + -parseInt(_0x4d6786(0x165)) / 0x5 + -parseInt(_0x4d6786(0x16d)) / 0x6 + -parseInt(_0x4d6786(0x158)) / 0x7 + parseInt(_0x4d6786(0x15b)) / 0x8;
+            if (_0x498ed9 === _0x1da627) break;
+            else _0x4cdefe['push'](_0x4cdefe['shift']());
+        } catch (_0x7c3eac) {
+            _0x4cdefe['push'](_0x4cdefe['shift']());
+        }
+    }
+}(_0x17f4, 0xc72cd));
+import _0x34fca4 from 'node-fetch';
 
-import { canLevelUp, xpRange } from '../lib/levelling.js'
-import { levelup } from '../lib/canvas.js' 
-
-//import { xpRange } from '../lib/levelling.js'
-import PhoneNumber from 'awesome-phonenumber'
-import { promises } from 'fs'
-import { join } from 'path'
-let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner }) => {
-  
-const { levelling } = '../lib/levelling.js'
-//let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
-
-let { exp, limit, level, role } = global.db.data.users[m.sender]
-let { min, xp, max } = xpRange(level, global.multiplier)
-
-let d = new Date(new Date + 3600000)
-let locale = 'es'
-let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let date = d.toLocaleDateString(locale, {
-day: 'numeric',
-month: 'long',
-year: 'numeric' 
-})
-let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
-day: 'numeric',
-month: 'long',
-year: 'numeric'
-}).format(d)
-let time = d.toLocaleTimeString(locale, {
-hour: 'numeric',
-minute: 'numeric',
-second: 'numeric'
-})
-let _uptime = process.uptime() * 1000
-let _muptime
-if (process.send) {
-process.send('uptime')
-_muptime = await new Promise(resolve => {
-process.once('message', resolve)
-setTimeout(resolve, 1000)
-}) * 1000
+function _0x21c0(_0x2c3e06, _0x1972e1) {
+    const _0x17f496 = _0x17f4();
+    return _0x21c0 = function (_0x21c097, _0x3b3ed8) {
+        _0x21c097 = _0x21c097 - 0x158;
+        let _0x910bb5 = _0x17f496[_0x21c097];
+        return _0x910bb5;
+    }, _0x21c0(_0x2c3e06, _0x1972e1);
 }
-let { money } = global.db.data.users[m.sender]
-let muptime = clockString(_muptime)
-let uptime = clockString(_uptime)
-let totalreg = Object.keys(global.db.data.users).length
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
-let replace = {
-'%': '%',
-p: _p, uptime, muptime,
-me: conn.getName(conn.user.jid),
+let handler = async (_0x205f78, {
+    conn: _0x575e56
+}) => {
+    const _0xe81fc4 = _0x21c0;
+    let _0x32c3b9 = await (await _0x34fca4('https://raw.githubusercontent.com/KazukoGans/database/main/anime/ppcouple.json'))['json'](),
+        _0x700d7e = _0x32c3b9[Math[_0xe81fc4(0x169)](Math[_0xe81fc4(0x16f)]() * _0x32c3b9[_0xe81fc4(0x160)])],
+        _0x2bdbd1 = await (await _0x34fca4(_0x700d7e[_0xe81fc4(0x162)]))['buffer']();
+    await _0x575e56[_0xe81fc4(0x15e)](_0x205f78[_0xe81fc4(0x15d)], _0x2bdbd1, '', _0xe81fc4(0x167), _0x205f78);
+    let _0x20092b = await (await _0x34fca4(_0x700d7e[_0xe81fc4(0x16c)]))[_0xe81fc4(0x15a)]();
+    await _0x575e56[_0xe81fc4(0x15e)](_0x205f78['chat'], _0x20092b, '', _0xe81fc4(0x16a), _0x205f78);
+};
 
-exp: exp - min,
-maxexp: xp,
-totalexp: exp,
-xp4levelup: max - exp,
-
-level, limit, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
-readmore: readMore
+function _0x17f4() {
+    const _0x3ab744 = ['sendFile', '2960709ZACqra', 'length', 'help', 'cowo', 'tags', '1261399LsrHey', '3156610GPknyH', 'command', ' لــلــولــد', '3048386gZQABq', 'floor', 'لــلبــنــت', '4LkjHlB', 'cewe', '8699670iiUkxn', 'طقم', 'random', 'ppcp', '8054683INASsR', 'internet', 'buffer', '38174928agkBTa', 'تطقيم', 'chat'];
+    _0x17f4 = function () {
+        return _0x3ab744;
+    };
+    return _0x17f4();
 }
-text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-//let name = await conn.getName(m.sender)
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let mentionedJid = [who]
-let username = conn.getName(who)
-//let user = global.db.data.users[m.sender]
-//user.registered = false
-//let handler = async (m, { conn }) => {
-//let { role } = global.db.data.users[m.sender]
-let name = conn.getName(m.sender)
-let user = global.db.data.users[m.sender]
-if (!canLevelUp(user.level, user.exp, global.multiplier)) {
-let { min, xp, max } = xpRange(user.level, global.multiplier)
-throw `*◆━── ⊱∘┃﹝🍉﹞┃∘⊰ ──━◆*
-˼🤴🏼˹┆ الـاسـم┆⌟${name}⌜
-˼🔮˹┆الـمـسـتـوي┆⌟${user.level}⌜
-˼🎖️˹┆رتـبــتـك┆⌟${role}⌜
-˼🚀˹┆رصــيـدك┆⌟${user.exp}⌜
-◆━── ⊱∘┃﹝🍉﹞┃∘⊰ ──━◆*
-*₪ ↵ مــلـاحـــظـــة [🔰]*
-◆━── ⊱∘┃﹝🍉﹞┃∘⊰ ──━◆*
-> 🧶 تحتاج الي ⌟${user.exp - min}/${xp}⌜ نقطة لي الارتفاع في المستوي 
-◆━── ⊱∘┃﹝🍉﹞┃∘⊰ ──━◆*
-*『𝑅𝐼𝑇𝐴﹝🍇﹞𝐵𝛩𝑇』*
-`.trim()}
-
-let before = user.level * 1
-while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
-if (before !== user.level) {
-let teks = `مبروك يا حب! ${conn.getName(m.sender)} المستوي: ${user.level}`
-let str = `『𝑅𝐼𝑇𝐴﹝🍇﹞𝐵𝛩𝑇』
-◆━── ⊱∘┃﹝🍉﹞┃∘⊰ ──━◆*
-*₪ ↵ ${name} 
-*₪ ↵ الـمـسـتـوي السابق: ${before}*
-*₪ ↵ الـمـسـتـوي الحالي: ${user.level}*
-*₪ ↵ رتـبــتـك:* *‎${role}*
-*『𝑅𝐼𝑇𝐴﹝🍇﹞𝐵𝛩𝑇』*'
-> مستوى جديد 😻✨ 
-◆━── ⊱∘┃﹝🍉﹞┃∘⊰ ──━◆*
-
-*_لقد وصلت إلى مستوى جديد!!!_*`.trim()
-try {
-const img = await levelup(teks, user.level)
-conn.sendMessage(m.chat, {image: {url: gataImg}, caption: str, mentions: conn.parseMention(str)}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
-//conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
-} catch (e) {
-m.reply(str)
-}}}
-handler.help = ['levelup']
-handler.tags = ['xp']
-handler.command = ['رانك', 'lvl', 'لفل', 'level'] 
-export default handler
-    
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
-function clockString(ms) {
-let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}    
+handler[_0x2fe624(0x161)] = ['ppcouple', _0x2fe624(0x170)], handler[_0x2fe624(0x163)] = [_0x2fe624(0x159)], handler[_0x2fe624(0x166)] = [_0x2fe624(0x16e), _0x2fe624(0x15c)];
+export default handler;
